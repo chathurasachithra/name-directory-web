@@ -1,0 +1,133 @@
+.btn{
+  &.btn-primary{
+    background-color: #72bb38;
+    border-color: #72bb38;
+    font-weight: 700;
+  }
+
+  &.btn-outline{
+    background-color: white;
+    border: 1px solid #72bb38;
+    color: #72bb38;
+    @include font-details(14, $font-weight-bold);
+  }
+}
+
+.btn-dark {
+    background-color: #07752c !important;
+    border-color: #07752c !important;
+}
+
+.btn:before {
+  background-color: transparent !important;
+  transition: none;
+}
+
+.btn.btn-outline-primary:hover, .btn.btn-outline-primary:focus,
+.btn.btn-outline-primary:active,  .btn.btn-outline-primary:active:focus {
+  color: #0b9e0f;
+  background: transparent;
+}
+
+.btn-clear {
+  min-width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #5e6f75;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0px;
+
+  &:hover{
+    color: $white;
+    background-color: darken(#5e6f75, 5%);
+  }
+}
+
+.btn-new {
+  min-width: 120px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #0b9e0f;
+  color: #0b9e0f;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0px;
+
+  .lnr {
+    padding-right: 5px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: darken(#0b9e0f, 5%);
+  }
+}
+
+.btn-activate {
+  min-width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: darken(#72bb38, 10%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  transition: all 0.5s ease;
+
+  &:hover{
+    color: $white;
+    background-color: darken(#72bb38, 15%);
+  }
+}
+
+.btn-default-custom {
+  height: 40px;
+  background-color: #b0457b;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  transition: all 0.5s ease;
+
+  &:hover, &:focus, &:active, &:active:focus{
+    color: $white;
+    background-color: darken(#b0457b, 15%);
+  }
+}
+
+.btn-save-update {
+  min-width: 122px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #72bb38;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  transition: all 0.5s ease;
+
+  &:hover{
+    color: $white;
+    background-color: darken(#0b9e0f, 5%);
+  }
+}
+
+.btn-save-update-active {
+  min-width: 122px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #72bb38;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  transition: all 0.5s ease;
+
+  &:hover{
+    color: $white;
+    background-color: darken(#72bb38, 5%);
+  }
+}

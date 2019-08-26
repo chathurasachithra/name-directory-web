@@ -1,0 +1,151 @@
+.user-flow {
+
+  &.password-reset {
+
+    .account{
+      &__title {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &.new-password {
+
+    .account {
+
+      &__card {
+        padding-top: 144px;
+      }
+
+    }
+
+  }
+
+  &.verify-email{
+
+    .account{
+
+      &__card {
+        padding-top: 144px;
+      }
+
+    }
+  }
+
+  .account{
+    &__title {
+      margin-bottom: 115px;
+    }
+
+    &__head {
+      margin-bottom: 0;
+      padding-left: 0;
+      border-left: none;
+    }
+
+    &__card {
+      width: 570px;
+      height: 576px;
+      max-width: inherit;
+      padding: 50px 70px 65px 70px;
+
+      &--inner{
+        height: 100%;
+        position: relative;
+      }
+
+      .account {
+        &__btns {
+          margin: 0;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+
+          button{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__logo {
+      img {
+        width: 126px;
+        margin-left: 10px;
+      }
+    }
+
+    &__form-heading {
+      margin-bottom: 20px;
+      font-weight: $font-weight-bold;
+
+      &.subheading{
+        margin-bottom: 5px;
+      }
+    }
+
+    &__form-subheading{
+      font-size: 16px;
+      color: #818383;
+      margin-bottom: 20px;
+    }
+
+    &__forgot-password{
+      position: inherit;
+      float: right;
+      margin-top: 0;
+      font-weight: $font-weight-regular;
+      margin-bottom: 2px;
+
+      a{
+        color: #5accf3;
+      }
+    }
+
+    &__subhead{
+      &.subhead{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+
+  .form__form-group{
+    margin-bottom: 10px;
+  }
+
+  .back-btn-wrapper{
+
+    margin-bottom: 23px;
+
+    &__back-btn{
+      background-color: white;
+      border: 1px solid #13b6ed;
+      border-radius: 30px;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+      float: left;
+      margin-right: 10px;
+      margin-top: 3px;
+
+      svg{
+        fill: #13b6ed;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+      }
+    }
+
+    &__label-text{
+      color: #13b6ed;
+      font-size: 12px;
+      font-weight: $font-weight-regular;
+    }
+  }
+
+}

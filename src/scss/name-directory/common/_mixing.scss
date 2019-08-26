@@ -1,0 +1,136 @@
+// Mixins
+
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+  transition: $duration;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin border-radius-all($top, $right, $bottom, $left) {
+  border-radius: $top $right $bottom $left;
+  -webkit-border-radius: $top $right $bottom $left;
+  -moz-border-radius: $top $right $bottom $left;
+}
+
+@mixin box-shadow($left, $top, $radius, $color) {
+  box-shadow: $left $top $radius $color;
+  -webkit-box-shadow: $left $top $radius $color;
+  -moz-box-shadow: $left $top $radius $color;
+}
+
+@mixin button-properties($color) {
+  background-color: $color;
+  border-color: $color;
+  transition: all 0.5s ease;
+  padding: 14px 32px;
+  font-family: "proxima_novabold", sans-serif;
+  @content;
+  &:hover,
+  &:focus {
+    background-color: darken($color, 5%);
+    border-color: darken($color, 5%);
+    @content;
+  }
+}
+
+//px to em
+@mixin font-size($size) {
+  font-size: ($size / 16) * 1em;
+}
+
+@mixin font-details($size, $weight) {
+  @include font-size($size);
+  font-weight: $weight;
+}
+
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: rotate($transform);
+  -ms-transform: rotate($transform);
+  transform: rotate($transform);
+}
+
+@mixin placeholder-details($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+//- responsive screens
+$mobile-width-mx: 740px;
+$mobile-width-mn: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-large-width: 1280px;
+$desktop-width_s: 1366px;
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width_s}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-device-width: #{$desktop-width}) and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and (max-device-width: #{$desktop-width}) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media only screen and (max-device-width: #{$desktop-width}) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-device-width: #{$mobile-width-mx}) and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait {
+  @media only screen and (max-device-width: #{$mobile-width-mx}) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media only screen and (max-device-width: #{$mobile-width-mx}) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+    @content;
+  }
+}

@@ -1,0 +1,36 @@
+.alert-bar{
+
+  padding: 17px 25px;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+
+  &__text{
+    font-size: 14px;
+    font-weight: $font-weight-regular;
+    line-height: 20px;
+
+    &.info{
+      color: #1983c3 !important;
+    }
+    &.error{
+      color: #ff0314;
+    }
+    &.success{
+      color: #00ff18;
+    }
+  }
+
+  &.info{
+    background-color: #edf3f6;
+  }
+
+  &.error{
+    background-color: #ffdcd0;
+  }
+
+  &.success{
+    background-color: #e7f7e4;
+  }
+
+}

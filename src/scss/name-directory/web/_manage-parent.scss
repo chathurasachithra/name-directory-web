@@ -1,0 +1,55 @@
+.manage-patient-container{
+  .name-search{
+    height: 44px;
+    border: 1px solid #eff0ef;
+
+    .form__form-group-search {
+      padding: 7px 15px;
+    }
+
+    .form__custom-field--icon-left {
+      border: none;
+    }
+  }
+
+  .time-filter-wrapper {
+    margin-bottom: 25px;
+  }
+}
+
+.manage-patient {
+  .content-wrapper {
+    padding: 10px;
+    border: 1px solid #e0e2e0;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .content-holder {
+    margin-top: 15px;
+  }
+
+  .nav-tabs {
+    border-bottom: none;
+    margin-bottom: -2px;
+
+    .nav-item {
+      margin-bottom: -1px;
+      margin-right: 1px;
+      cursor: pointer;
+    }
+
+    .nav-link {
+      border-color: #e0e2e0 #e0e2e0 #eeeef7 #e0e2e0;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .nav-link.active {
+      border: 1px solid #e0e2e0;
+      background-color: #eef0f7;
+      border-bottom: none;
+    }
+  }
+}

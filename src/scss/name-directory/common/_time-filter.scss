@@ -1,0 +1,91 @@
+.time-filters-wrapper{
+  .time-filter-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+
+    .time-filter-item{
+      float: left;
+      text-transform: capitalize;
+
+      &:first-child{
+        padding: 10px 20px 10px 0;
+        @include font-details(14, $font-weight-semi-bold);
+        color: #50514f;
+      }
+
+      span{
+        display: block;
+        padding: 10px 20px;
+        background-color: $white;
+        cursor: pointer;
+        border: 1px solid #f4f5f6;
+        @include font-details(12, $font-weight-regular);
+        cursor: pointer;
+
+        &:hover, &.active {
+          background-color: #f6f6f6;
+        }
+      }
+    }
+  }
+  .clear-filter{
+    color: #00b0ec !important;
+    background: white;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px 10px;
+    margin-top: 10px;
+    font-weight: 700;
+    border: 1px solid #00b0ec;
+    border-radius: 5px;
+    margin-left: 10px;
+
+    &:hover{
+      background: #00b0ec;
+      color: white !important;
+    }
+  }
+  .date-range-picker-wrapper{
+    float: left;
+    margin-left: 15px;
+
+    .date-range-calender{
+
+      .btn-secondary{
+        background-color: transparent;
+        height: 42px;
+        border: none;
+        background-image: url(../shared/img/calender-disabled.png);
+        background-repeat: no-repeat;
+        background-position: 96% 50%;
+        margin: 0;
+        padding: 10px 40px 10px 0;
+        min-width: 175px;
+
+        &:active{
+          background-color: transparent;
+        }
+
+        .time-lable{
+          color: #868886;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.selected{
+
+      .date-range-calender{
+        .btn-secondary{
+          background-image: url(../shared/img/calender-blue.png);
+          .time-lable{
+            color: #00b0ec;
+          }
+        }
+      }
+    }
+  }
+}
