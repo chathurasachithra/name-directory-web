@@ -11,6 +11,9 @@ export const FETCH_NAME_ERROR = 'FETCH_NAME_ERROR';
 export const CLEAR_NAME_RECORD = 'CLEAR_NAME_RECORD';
 export const UPDATE_NAME = 'UPDATE_NAME';
 export const UPDATE_NAME_ERROR = 'UPDATE_NAME_ERROR';
+export const GET_NAME_LIST_DATA = 'GET_NAME_LIST_DATA';
+export const GET_NAME_LIST_DATA_ERROR = 'GET_NAME_LIST_DATA_ERROR';
+export const INCREASE_COUNT = 'INCREASE_COUNT';
 
 export const getNames = (data) => dispatch => {
   handleRequest('post', `directory-name/get`, true, data).then( (results) => {
@@ -97,4 +100,28 @@ export const updateName = (data, id) => dispatch => {
     });
   });
 };
+
+export const getNameList = (data) => dispatch => {
+  handleRequest('post', `directory-name/get-all`, true, data).then( (results) => {
+    return dispatch ({
+      type: GET_NAME_LIST_DATA,
+      payload: results.data
+    });
+  }).catch((error) => {
+    return dispatch ({
+      type: GET_NAME_LIST_DATA_ERROR,
+      payload: JSON.parse(error.response),
+    });
+  });
+};
+
+export const increaseCount = (name) => dispatch => {
+  handleRequest('get', `directory-name/increase-view/${name}`, true).then( (results) => {
+    return dispatch ({
+      type: INCREASE_COUNT,
+      payload: results.data
+    });
+  });
+};
+
 

@@ -1,6 +1,7 @@
 import {
   GET_NAME_DATA, REMOVE_NAME, REMOVE_NAME_ERROR, GET_STATIC_DATA, ADD_NEW_NAME, ADD_NEW_NAME_ERROR,
-  FETCH_NAME, FETCH_NAME_ERROR, CLEAR_NAME_RECORD, UPDATE_NAME, UPDATE_NAME_ERROR
+  FETCH_NAME, FETCH_NAME_ERROR, CLEAR_NAME_RECORD, UPDATE_NAME, UPDATE_NAME_ERROR,
+  GET_NAME_LIST_DATA, GET_NAME_LIST_DATA_ERROR,
 } from '../actions/nameActions';
 
 const initialState = {
@@ -75,6 +76,18 @@ export default function (state = initialState, action) {
         nameUpdateErrorResponse: action.payload,
         nameUpdateResponse: null,
       };
+    case GET_NAME_LIST_DATA:
+      return {
+        ...state,
+        nameList: action.payload,
+        nameListError: null,
+      }
+    case GET_NAME_LIST_DATA_ERROR:
+      return {
+        ...state,
+        nameList: null,
+        nameListError: action.payload,
+      }
     default:
       return state;
   }
