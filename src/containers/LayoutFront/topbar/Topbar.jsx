@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import TopbarSidebarButton from './TopbarSidebarButton';
 
 class Topbar extends PureComponent {
   static propTypes = {
